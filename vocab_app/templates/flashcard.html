@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>フラッシュカード</h1>
+
+  {% if finished %}
+    <p>全ての単語を表示しました！</p>
+    <a href="{{ url_for('flashcard') }}">もう一度シャッフルして始める</a>
+  {% else %}
+    <div class="card">
+      <div class="english">
+        {{ word.english }}
+      </div>
+      {% if show_answer %}
+        <div class="japanese">
+          {{ word.japanese }}
+        </div>
+        <div class="note">
+          {{ word.note }}
+        </div>
+      {% endif %}
+      <div class="buttons">
+        {% if not show_answer %}
+          <a class="btn" href="{{ url_for('show_answer') }}">答え</a>
+        {% else %}
+          <a class="btn" href="{{ url_for('next_card') }}">次へ</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

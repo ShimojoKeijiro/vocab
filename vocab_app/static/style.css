@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  nav a { margin-right: 10px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+  th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  form input { margin-right: 8px; }
+  .card {
+    border: 1px solid #333;
+    padding: 20px;
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  .english { font-size: 1.5em; margin-bottom: 20px; }
+  .japanese { font-size: 1.2em; color: #555; }
+  .note { font-size: 0.9em; color: #888; margin-top: 10px; }
+  .buttons .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 10px 5px;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 4px;
+  }
+  
